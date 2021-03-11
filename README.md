@@ -1,3 +1,3 @@
-# nestjs-clean-architecture-example
+# typescript-eslint-jest-commitlint-starter
 
 .
