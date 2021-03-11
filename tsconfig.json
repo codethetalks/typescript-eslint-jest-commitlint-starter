@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
+
     "incremental": true,
     "target": "es2017",
-    "outDir": "build/main",
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {},
+    "outDir": "dist/main",
     "rootDir": "src",
     "moduleResolution": "node",
     "module": "commonjs",
@@ -10,6 +15,12 @@
     "inlineSourceMap": true,
     "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
     "resolveJsonModule": true /* Include modules imported with .json extension. */,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
 
     "strict": true /* Enable all strict type-checking options. */,
 
@@ -34,14 +45,19 @@
     "pretty": true /* Stylize errors and messages using color and context. */,
 
     /* Experimental Options */
-    // "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
-    // "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
-
-    "lib": ["es2017"],
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules/**"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "docs",
+    "build",
+    "out",
+    ".next",
+    ".vercel"
+  ],
   "compileOnSave": false
 }

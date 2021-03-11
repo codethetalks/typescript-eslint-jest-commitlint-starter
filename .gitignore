@@ -1,9 +1,11 @@
 .idea/*
 .nyc_output
-build
 node_modules
+dist
+build
+tests
 test
-src/**.js
 coverage
+src/**.js
 *.log
 yarn.lock
